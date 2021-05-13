@@ -31,8 +31,16 @@ app.post("/api/notes", (req, res) => {
     if (err) throw err;
     let notesArr = JSON.parse(data);
     notesArr.push(note);
-    fs.writeFile('./db/db.json', JSON.stringify(notesArr), (err) => {if (err) throw err});
+    fs.writeFile("./db/db.json", JSON.stringify(notesArr), (err) => {
+      if (err) throw err;
+    });
   });
+  res.send(console.log("note saved!"));
 });
+
+// route to delete notes
+app.delete("/api/notes/:id", (req, res) => {
+
+})
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
