@@ -35,12 +35,13 @@ app.post("/api/notes", (req, res) => {
       if (err) throw err;
     });
   });
-  res.send(console.log("note saved!"));
+  console.log(note);
+  res.json(note);
 });
 
 // route to delete notes
 app.delete("/api/notes/:id", (req, res) => {
-
+  
 })
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
