@@ -22,8 +22,6 @@ Note taking app that allows the user to create, save, retrieve, and delete notes
 
 ## Usage
 
-``````
-
 ## License
 
 This project is distrubuted under the following licenses:
@@ -35,8 +33,6 @@ This project is distrubuted under the following licenses:
 Email me
 
 ## Tests
-
-``````
 
 ## Questions
 
