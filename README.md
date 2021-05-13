@@ -20,8 +20,6 @@ Note taking app that allows the user to create, save, retrieve, and delete notes
 
 ```Repo can be deployed directly to heroku.```
 
-## Usage
-
 ## License
 
 This project is distrubuted under the following licenses:
@@ -31,8 +29,6 @@ This project is distrubuted under the following licenses:
 ## Contributing
 
 Email me
-
-## Tests
 
 ## Questions
 
