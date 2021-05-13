@@ -41,7 +41,20 @@ app.post("/api/notes", (req, res) => {
 
 // route to delete notes
 app.delete("/api/notes/:id", (req, res) => {
-  
-})
+  const id = req.params.id;
+  fs.readFile("./db/db.json", (err, data) => {
+    if (err) throw err;
+    const notesArr = JSON.parse(data);
+    for (let i = 0; i < notesArr.length; i++) {
+      if (notesArr[i].id === id) {
+        notesArr.splice(i, 1);
+      }
+    }
+    fs.writeFile("./db/db.json", JSON.stringify(notesArr), (err) => {
+      if (err) throw err;
+    });
+  });
+  res.send("Delete successful");
+});
 
 app.listen(PORT, () => console.log(`App listening on PORT ${PORT}`));
