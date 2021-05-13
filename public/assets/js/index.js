@@ -59,6 +59,7 @@ const renderActiveNote = () => {
     noteTitle.value = activeNote.title;
     noteText.value = activeNote.text;
   } else {
+    // have to remove the readonly attr for the new note button to allow editing
     noteTitle.removeAttribute('readonly');
     noteText.removeAttribute('readonly');
     noteTitle.value = "";
@@ -70,6 +71,7 @@ const handleNoteSave = () => {
   const newNote = {
     title: noteTitle.value,
     text: noteText.value,
+    // to read or delete an item, a unique id needs to be assigned
     id: noteText.value + `${Math.floor(Math.random() * 1000)}`,
   };
   saveNote(newNote).then(() => {
