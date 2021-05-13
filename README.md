@@ -9,10 +9,8 @@ Note taking app that allows the user to create, save, retrieve, and delete notes
 ## Table of Contents
 
 - [Installation](#installation)
-- [Usage](#usage)
 - [License](#license)
 - [Contributing](#contributing)
-- [Tests](#tests)
 - [Questions](#questions)
 
 
